@@ -6,7 +6,9 @@ A interactive document management bot for WordPress. Effortlessly organize, sear
 
 ## Getting Started
 
-After installing plugin navigate to the settings page through `Dashboard > Settings > BSF Docs Bot`
+1. After installing plugin navigate to the settings page through `Dashboard > Settings > BSF Docs Bot`.
+2. Setup docs bot with settings Product Name, Team ID, Bot ID, Support CTA, and Support URL.
+3. Use shortcode `[bsf_docs_bot]` to display the bot on a page.
 
 ## Credit
 
