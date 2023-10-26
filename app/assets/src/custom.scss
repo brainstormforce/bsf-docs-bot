@@ -1,0 +1,36 @@
+#ast-bsf-docs-content input.bsf-docs-bot-input:focus {
+	border: 1px solid var(--theme-color-1,#492cdd);
+	outline: none;
+	box-shadow: none;
+}
+#ast-bsf-docs-content button.bsf-bot-random-cta,
+#ast-bsf-docs-content button.bsf-bot-random-cta:hover,
+#ast-bsf-docs-content button.bsf-bot-random-cta:focus,
+#ast-bsf-docs-content button.bsf-bot-thumbs-reaction,
+#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:hover,
+#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:focus {
+    border: none;
+    outline: none;
+    border-radius: unset;
+    background: transparent;
+}
+#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:hover,
+#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:focus {
+    background: transparent;
+
+}
+button.bsf-bot-ask-cta {
+    border: none;
+}
+#ast-bsf-docs-content .mb-0 {
+    margin-bottom: 0;
+}
+.ast-desktop .bsf-docs-bot-input {
+    padding-right: 7rem;
+}
+.wpchat-code a {
+	color: #7143e3;
+}
+.ast-header-break-point .bsf-docs-bot-input {
+    padding-right: 2.5rem;
+}

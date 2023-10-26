@@ -1,0 +1,161 @@
+.bsf-docs-bot-clearfix:before,
+.bsf-docs-bot-clearfix:after {
+    display: table;
+    content: "";
+}
+.bsf-docs-bot-clearfix:after {
+    clear: both;
+}
+/* Options Page */
+.bsf-docs-bot-options-form-wrap{
+    width: 100%;
+}
+table.form-table .top-align-section,
+.top-align-tr-section .wp-picker-container {
+    vertical-align: top;
+}
+.bsf-docs-bot-options-form-wrap .form-table th {
+    width: 350px;
+}
+.form-table input {
+    width: 400px;
+	height: 40px;
+}
+.form-table textarea {
+    width: 400px;
+    height: 120px;
+}
+.text-top {
+    vertical-align: text-top;
+}
+/*
+ * Tooltip help CSS starts here.
+ */
+.bsf-docs-bot-table-data .bsf-docs-bot-help-tooltip {
+    float: right;
+    color: #654b4b;
+}
+.bsf-docs-bot-table-data .bsf-docs-bot-help-tooltip:hover {
+    cursor: help;
+}
+.bsf-docs-bot-table-data .dashicons-editor-help:before {
+    font-family: dashicons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    vertical-align: initial;
+    text-align: center;
+    -webkit-transition: color 0.1s ease-in;
+    transition: color 0.1s ease-in;
+    content: "\f223";
+}
+
+
+.bsf-docs-bot-table-data .wcf-field-row-heading .dashicons {
+    line-height: 1;
+    margin-left: 5px;
+}
+
+.bsf-docs-bot-table-data .bsf-docs-bot-tooltip-text {
+    background: #444;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    height: auto;
+    left: 285px;
+    margin-top: 8px;
+    max-width: 150px;
+    position: absolute;
+    font-size: 12px;
+    line-height: 1.5em;
+    font-weight: normal;
+    padding: 6px 10px;
+    top: auto;
+    display: none;
+    z-index: 10000;
+}
+.bsf-docs-bot-table-data .bsf-docs-bot-tooltip-text::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid #444;
+    bottom: auto;
+    content: " ";
+    font-size: 0;
+    left: 56px;
+    line-height: 0;
+    margin-left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+}
+.bsf-docs-bot-table-data .display_tool_tip {
+    display: block;
+}
+th .bsf-docs-bot-admin-setting-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 auto;
+    color: #23282d;
+    display: inline-block;
+}
+.bsf-docs-bot-options-form-wrap .bsf-docs-bot-admin-setting-header {
+    padding-top: 20px;
+}
+p.bsf-docs-bot-submit-para {
+    margin-top: 0;
+    padding-top: 40px;
+    clear: both;
+}
+.bsf-docs-bot-page-title {
+	border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+}
+.bsf-docs-bot-page-dashicon {
+    font-size: 30px;
+    line-height: 1em;
+    margin-right: 30px;
+    vertical-align: top;
+}
+.bsf-docs-bot-page-middle-align,
+.middle-align-color-field .wp-picker-container {
+    vertical-align: middle;
+}
+.post-type-fail-search-result .doc-count-updater {
+    vertical-align: middle;
+    -webkit-animation: import-spin 1.5s infinite;
+    animation: import-spin 1.5s infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    margin-left: 4px;
+}
+@-webkit-keyframes import-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes import-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

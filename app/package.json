@@ -1,0 +1,47 @@
+{
+	"name": "bsf-docs-bot",
+	"version": "1.0.0",
+	"description": "Astra's Docs Bot.",
+	"main": "",
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"i18n": "grunt textdomain && wp i18n make-pot languages/wp-plugin-base.pot --domain=wp-plugin-base --debug",
+		"lint-js": "wp-scripts lint-js",
+		"lint-js:fix": "npm run pretty:fix && npm run lint-js -- --fix",
+		"lint-css": "wp-scripts lint-style --allow-empty-input",
+		"lint-css:fix": "npm run lint-css -- --fix",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+    "@heroicons/react": "^2.0.15",
+    "remark": "^14.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.2",
+    "autoprefixer": "^10.4.12",
+    "sass": "^1.58.0",
+    "focus-visible": "^5.2.0",
+    "postcss-focus-visible": "^6.0.4",
+    "tailwindcss": "^3.2.1",
+    "@tailwindcss/typography": "^0.5.9"
+	},
+	"devDependencies": {
+		"@wordpress/api-fetch": "^3.20.0",
+		"@wordpress/prettier-config": "^0.4.0",
+		"@wordpress/scripts": "^19.2.2",
+		"grunt": "^1.4.1",
+		"grunt-cli": "^1.4.3",
+		"grunt-contrib-clean": "^2.0.0",
+		"grunt-contrib-compress": "^2.0.0",
+		"grunt-contrib-copy": "^1.0.0",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brainstormforce/astra.git"
+	},
+	"author": "Brainstorm Force",
+	"license": "ISC"
+}
