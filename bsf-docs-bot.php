@@ -2,7 +2,8 @@
 /**
  * Plugin Name: BSF Docs Bot
  * Description: This ultimate tool for managing and presenting interactive documentation with ease and efficiency.
- * Author: Navanath Bhosale
+ * Author: Brainstorm Force, Navanath Bhosale
+ * Author URI: https://github.com/brainstormforce/bsf-docs-bot
  * Version: 1.0.0
  * License: GPL v2
  * Text Domain: bsf-docs-bot
