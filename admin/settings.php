@@ -75,10 +75,10 @@ printf( '%1$s', $header_markup );
 				</tr>
 
 				<tr valign="top">
-					<th class="pf-docs-table-data" scope="row"><?php _e( 'Sily Phrases', 'bsf-docs-bot' ); ?>
-						<span class="pf-docs-help-tooltip">
-							<i class="pf-docs-field-help dashicons dashicons-editor-help"></i>
-							<span class="pf-docs-tooltip-text"> <?php _e( 'Add sily phrases separated by "|"', 'bsf-docs-bot' ); ?> </span>
+					<th class="bsf-docs-bot-table-data" scope="row"><?php _e( 'Sily Phrases', 'bsf-docs-bot' ); ?>
+						<span class="bsf-docs-bot-help-tooltip">
+							<i class="bsf-docs-bot-field-help dashicons dashicons-editor-help"></i>
+							<span class="bsf-docs-bot-tooltip-text"> <?php _e( 'Add sily phrases separated by "|"', 'bsf-docs-bot' ); ?> </span>
 						</span>
 					</th>
 					<td>
@@ -87,10 +87,10 @@ printf( '%1$s', $header_markup );
 				</tr>
 
 				<tr valign="top">
-					<th class="pf-docs-table-data" scope="row"><?php _e( 'Random Questions', 'bsf-docs-bot' ); ?>
-						<span class="pf-docs-help-tooltip">
-							<i class="pf-docs-field-help dashicons dashicons-editor-help"></i>
-							<span class="pf-docs-tooltip-text"> <?php _e( 'Add random questions separated by "|"', 'bsf-docs-bot' ); ?> </span>
+					<th class="bsf-docs-bot-table-data" scope="row"><?php _e( 'Random Questions', 'bsf-docs-bot' ); ?>
+						<span class="bsf-docs-bot-help-tooltip">
+							<i class="bsf-docs-bot-field-help dashicons dashicons-editor-help"></i>
+							<span class="bsf-docs-bot-tooltip-text"> <?php _e( 'Add random questions separated by "|"', 'bsf-docs-bot' ); ?> </span>
 						</span>
 					</th>
 					<td>
@@ -99,10 +99,10 @@ printf( '%1$s', $header_markup );
 				</tr>
 
 				<tr valign="top">
-					<th class="pf-docs-table-data" scope="row"><?php _e( 'After Text', 'bsf-docs-bot' ); ?>
-						<span class="pf-docs-help-tooltip">
-							<i class="pf-docs-field-help dashicons dashicons-editor-help"></i>
-							<span class="pf-docs-tooltip-text"> <?php _e( 'Add text CTA after responses. Ex. Support CTA', 'bsf-docs-bot' ); ?> </span>
+					<th class="bsf-docs-bot-table-data" scope="row"><?php _e( 'After Text', 'bsf-docs-bot' ); ?>
+						<span class="bsf-docs-bot-help-tooltip">
+							<i class="bsf-docs-bot-field-help dashicons dashicons-editor-help"></i>
+							<span class="bsf-docs-bot-tooltip-text"> <?php _e( 'Add text CTA after responses. Ex. Support CTA', 'bsf-docs-bot' ); ?> </span>
 						</span>
 					</th>
 					<td>
