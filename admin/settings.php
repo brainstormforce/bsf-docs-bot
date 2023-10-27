@@ -121,6 +121,18 @@ printf( '%1$s', $header_markup );
 						<input placeholder="/support/open-a-ticket/" type="text" name="support_link" value="<?php esc_attr_e( $support_link, 'bsf-docs-bot' ); ?>" />
 					</td>
 				</tr>
+
+				<tr valign="top">
+					<th class="bsf-docs-bot-table-data" scope="row"><?php _e( 'Shortcode', 'bsf-docs-bot' ); ?>
+							<span class="bsf-docs-bot-help-tooltip">
+								<i class="bsf-docs-bot-field-help dashicons dashicons-editor-help"></i>
+								<span class="bsf-docs-bot-tooltip-text"> <?php _e( 'Use this shortcode on your targeted page.', 'bsf-docs-bot' ); ?> </span>
+							</span>
+						</th>
+					<td>
+						<input readonly type="text" name="shortcode" value="[bsf_docs_bot]" onfocus="this.select();" />
+					</td>
+				</tr>
 			</table>
 
 			<p class="bsf-docs-bot-submit-para">

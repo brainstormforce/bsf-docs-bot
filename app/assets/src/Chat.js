@@ -366,14 +366,6 @@ export default function Chat() {
 										Submit a Ticket
 									</a>
 								</p>
-								<p className="mt-6 text-sm font-semibold text-fuchsia-700">
-									<a
-										href="https://docsbot.ai?utm_source=ChatWP&utm_medium=referral&utm_campaign=ChatWP"
-										className="underline"
-									>
-										Powered by DocsBot
-									</a>
-								</p>
 							</div>
 						)}
 					</>

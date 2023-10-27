@@ -1,0 +1,5 @@
+v1.0.1 - 27-October-2023
+- Improvement: Loaded admin script-styles only plugin's settings page.
+
+v1.0.0 - 26-October-2023
+- Fix: Initial Release with wpastra setup (https://wpastra.com/support/).

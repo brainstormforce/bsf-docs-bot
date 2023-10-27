@@ -1152,8 +1152,6 @@ video {
 }.text-yellow-800 {
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity));
-}.underline {
-  text-decoration-line: underline;
 }.opacity-25 {
   opacity: 0.25;
 }.shadow-lg {

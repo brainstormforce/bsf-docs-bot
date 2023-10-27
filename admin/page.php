@@ -108,22 +108,24 @@ class Page {
 	/**
 	 * Enqueue admin scripts.
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public function enqueue_admin_scripts() {
-		wp_enqueue_style(
-			'bsf-docs-bot-admin-settings-style',
-			BSF_DOCS_BOT_URL . 'admin/assets/style.css',
-			array(),
-			BSF_DOCS_BOT_VER
-		);
-		wp_enqueue_script(
-			'bsf-docs-bot-admin-settings-script',
-			BSF_DOCS_BOT_URL . 'admin/assets/script.js',
-			array( 'jquery' ),
-			BSF_DOCS_BOT_VER,
-			false
-		);
+		if ( ! empty( $_GET['page'] ) && BSF_DOCS_BOT_ADMIN_SLUG === $_GET['page'] ) { //phpcs:ignore
+			wp_enqueue_style(
+				'bsf-docs-bot-admin-settings-style',
+				BSF_DOCS_BOT_URL . 'admin/assets/style.css',
+				array(),
+				BSF_DOCS_BOT_VER
+			);
+			wp_enqueue_script(
+				'bsf-docs-bot-admin-settings-script',
+				BSF_DOCS_BOT_URL . 'admin/assets/script.js',
+				array( 'jquery' ),
+				BSF_DOCS_BOT_VER,
+				false
+			);
+		}
 	}
 
 	/**
