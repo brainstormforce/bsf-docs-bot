@@ -1,6 +1,6 @@
 {
 	"name": "bsf-docs-bot",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Astra's Docs Bot.",
 	"main": "",
 	"scripts": {
