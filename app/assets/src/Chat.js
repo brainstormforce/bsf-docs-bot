@@ -13,7 +13,7 @@ import remarkGfm from 'remark-gfm';
 import Alert from './Alert';
 
 const sillyPhrases = bsf_bot_localizer.sily_phrase;
-
+const exampleQuestionsSection = bsf_bot_localizer.random_que_section;
 const exampleQuestions = bsf_bot_localizer.random_que;
 
 export default function Chat() {
@@ -268,6 +268,29 @@ export default function Chat() {
 								className="bsf-docs-bot-input block w-full rounded-md border-gray-300 py-4  pl-4 pr-10 text-sm focus:outline-none sm:rounded-none sm:rounded-l-md sm:py-0 sm:pl-6 sm:pr-12 sm:text-lg"
 								placeholder={ `What do you want to know about ${bsf_bot_localizer.product_name}` }
 							/>
+							{
+								exampleQuestionsSection && (
+									<button
+										className="bsf-bot-random-cta absolute inset-y-0 right-0 flex items-center px-4"
+										title="Random Question"
+										tabIndex={3}
+										onClick={(e) => {
+											e.preventDefault()
+											//insert a random question
+											setQuestion(
+											exampleQuestions[
+												Math.floor(Math.random() * exampleQuestions.length)
+											]
+											)
+										}}
+									>
+										<ArrowPathIcon className="h-4 w-4 text-gray-400 hover:rotate-12 hover:brightness-110 active:brightness-110 sm:h-6 sm:w-6" />
+										<span className="ml-1 hidden text-gray-500 lg:block">
+											Random
+										</span>
+									</button>
+								)
+							}
 						</div>
 						<button
 							type="submit"

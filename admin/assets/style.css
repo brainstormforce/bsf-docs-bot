@@ -17,7 +17,17 @@ table.form-table .top-align-section,
 .bsf-docs-bot-options-form-wrap .form-table th {
     width: 350px;
 }
-.form-table input {
+span.bsf-bot-version {
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: normal;
+    background: #1d2327;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+.form-table input:not([type="checkbox"]) {
     width: 400px;
 	height: 40px;
 }
