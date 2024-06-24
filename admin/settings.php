@@ -12,18 +12,20 @@ use BSF_DOCS_BOT\Core\Helper;
 /*
  * Bot settings
  */
-$product_name = Helper::get_admin_settings_option( 'product_name' );
-$team_id      = Helper::get_admin_settings_option( 'team_id' );
-$bot_id       = Helper::get_admin_settings_option( 'bot_id' );
-$random_que   = Helper::get_admin_settings_option( 'random_que' );
-$sily_phrase  = Helper::get_admin_settings_option( 'sily_phrase' );
-$after_text   = Helper::get_admin_settings_option( 'after_text' );
-$support_link = Helper::get_admin_settings_option( 'support_link' );
+$product_name       = Helper::get_admin_settings_option( 'product_name' );
+$team_id            = Helper::get_admin_settings_option( 'team_id' );
+$bot_id             = Helper::get_admin_settings_option( 'bot_id' );
+$random_que         = Helper::get_admin_settings_option( 'random_que' );
+$sily_phrase        = Helper::get_admin_settings_option( 'sily_phrase' );
+$after_text         = Helper::get_admin_settings_option( 'after_text' );
+$support_link       = Helper::get_admin_settings_option( 'support_link' );
+$random_que_section = Helper::get_admin_settings_option( 'random_que_section' );
 
 $header_markup  = '';
 $header_markup .= '<br/><h1 class="bsf-docs-bot-page-title">';
 $header_markup .= '<span class="dashicons dashicons-rest-api bsf-docs-bot-page-dashicon"></span><span class="bsf-docs-bot-page-middle-align">';
 $header_markup .= __( 'BSF Docs Bot Settings', 'bsf-docs-bot' );
+$header_markup .= '<span class="bsf-bot-version">v' . BSF_DOCS_BOT_VER . '</span>';
 $header_markup .= '</span></h1>';
 
 printf( '%1$s', $header_markup );
@@ -95,6 +97,10 @@ printf( '%1$s', $header_markup );
 					</th>
 					<td>
 						<textarea name="random_que" class="pf-docs-end-text" placeholder="How can I customize the header in Astra? Show me a before-and-after example.|What are the recommended plugins to enhance Astra theme functionality?" value=""><?php esc_attr_e( $random_que, 'bsf-docs-bot' ); ?></textarea>
+						<p>
+							<input type="checkbox" name="random_que_section" value="1" <?php checked( $random_que_section, 1 ); ?> />
+							<?php _e( 'Show "Random Question" in the Search.', 'bsf-docs-bot' ); ?>
+						</p>
 					</td>
 				</tr>
 

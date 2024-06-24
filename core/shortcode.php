@@ -95,14 +95,15 @@ class Shortcode {
 			'bsf-docs-bot-script',
 			'bsf_bot_localizer',
 			array(
-				'home_url'     => home_url(),
-				'product_name' => Helper::get_admin_settings_option( 'product_name' ),
-				'team_id'      => Helper::get_admin_settings_option( 'team_id' ),
-				'bot_id'       => Helper::get_admin_settings_option( 'bot_id' ),
-				'random_que'   => explode( '|', Helper::get_admin_settings_option( 'random_que' ) ),
-				'sily_phrase'  => explode( '|', Helper::get_admin_settings_option( 'sily_phrase' ) ),
-				'after_text'   => Helper::get_admin_settings_option( 'after_text' ),
-				'support_link' => Helper::get_admin_settings_option( 'support_link' ),
+				'home_url'           => home_url(),
+				'product_name'       => Helper::get_admin_settings_option( 'product_name' ),
+				'team_id'            => Helper::get_admin_settings_option( 'team_id' ),
+				'bot_id'             => Helper::get_admin_settings_option( 'bot_id' ),
+				'random_que'         => explode( '|', Helper::get_admin_settings_option( 'random_que' ) ),
+				'sily_phrase'        => explode( '|', Helper::get_admin_settings_option( 'sily_phrase' ) ),
+				'after_text'         => Helper::get_admin_settings_option( 'after_text' ),
+				'support_link'       => Helper::get_admin_settings_option( 'support_link' ),
+				'random_que_section' => Helper::get_admin_settings_option( 'random_que_section' ),
 			)
 		);
 	}
@@ -110,22 +111,32 @@ class Shortcode {
 	/**
 	 * BSF Docs Bot Shortcode.
 	 *
+	 * @param array $atts Array of attributes.
+	 *
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public function bsf_docs_bot_shortcode() {
+	public function bsf_docs_bot_shortcode( $atts ) {
+		if ( is_admin() ) {
+			return;
+		}
 		wp_enqueue_style( 'bsf-docs-bot-style' );
 		wp_enqueue_script( 'bsf-docs-bot-script' );
+
+		ob_start();
+
 		?>
-			<script>
-				document.body.classList.add( 'bsf-docs-bot-page' );
-			</script>
 			<div class="ast-bsf-docs-wrapper">
+				<script type="text/javascript">
+					document.body.classList.add( 'bsf-docs-bot-page' );
+				</script>
 				<div id="ast-bsf-docs-content">
 					<div id="bsf-docs-bot-app" class="astra-bot-app"> </div>
 				</div>
 			</div>
 		<?php
+
+		return ob_get_clean();
 	}
 }
 
