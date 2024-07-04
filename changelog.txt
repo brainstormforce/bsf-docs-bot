@@ -1,3 +1,7 @@
+v1.0.3 - Unreleased
+- New: Introduced new "Example Questions" section in the bot.
+- Improvement: Redesigned the bot UI for better user experience.
+
 v1.0.2 - 24-June-2024
 - Improvement: Option to remove "Random" questions sections from search.
 - Fix: Shortcode block does not compatible with block editor.

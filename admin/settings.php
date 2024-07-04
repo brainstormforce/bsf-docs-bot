@@ -20,6 +20,7 @@ $sily_phrase        = Helper::get_admin_settings_option( 'sily_phrase' );
 $after_text         = Helper::get_admin_settings_option( 'after_text' );
 $support_link       = Helper::get_admin_settings_option( 'support_link' );
 $random_que_section = Helper::get_admin_settings_option( 'random_que_section' );
+$example_questions  = Helper::get_admin_settings_option( 'example_questions' );
 
 $header_markup  = '';
 $header_markup .= '<br/><h1 class="bsf-docs-bot-page-title">';
@@ -85,6 +86,18 @@ printf( '%1$s', $header_markup );
 					</th>
 					<td>
 						<textarea name="sily_phrase" class="pf-docs-end-text" placeholder="Astra's magic, so fantastic, making websites look elastic!|With Astra, your site will gleam, like a star in a web design dream!Astra's powers, a digital feast, creating websites fit for a royal feast!" value=""><?php esc_attr_e( $sily_phrase, 'bsf-docs-bot' ); ?></textarea>
+					</td>
+				</tr>
+
+				<tr valign="top">
+					<th class="bsf-docs-bot-table-data" scope="row"><?php _e( 'Example Questions', 'bsf-docs-bot' ); ?>
+						<span class="bsf-docs-bot-help-tooltip">
+							<i class="bsf-docs-bot-field-help dashicons dashicons-editor-help"></i>
+							<span class="bsf-docs-bot-tooltip-text"> <?php _e( 'Add example questions separated by "|"', 'bsf-docs-bot' ); ?> </span>
+						</span>
+					</th>
+					<td>
+						<textarea name="example_questions" class="pf-docs-end-text" placeholder="What is the difference between Astra Free and Pro?|How to get Astra Premium Starter Template?|How to use Astra theme with Elementor?" value=""><?php esc_attr_e( $example_questions, 'bsf-docs-bot' ); ?></textarea>
 					</td>
 				</tr>
 

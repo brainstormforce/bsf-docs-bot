@@ -104,6 +104,7 @@ class Shortcode {
 				'after_text'         => Helper::get_admin_settings_option( 'after_text' ),
 				'support_link'       => Helper::get_admin_settings_option( 'support_link' ),
 				'random_que_section' => Helper::get_admin_settings_option( 'random_que_section' ),
+				'example_questions'  => explode( '|', Helper::get_admin_settings_option( 'example_questions' ) ),
 			)
 		);
 	}

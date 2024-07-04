@@ -142,6 +142,7 @@ class Page {
 		register_setting( 'bsf-docs-bot-settings-group', Helper::get_admin_settings_option( 'after_text' ) );
 		register_setting( 'bsf-docs-bot-settings-group', Helper::get_admin_settings_option( 'support_link' ) );
 		register_setting( 'bsf-docs-bot-settings-group', Helper::get_admin_settings_option( 'random_que_section' ) );
+		register_setting( 'bsf-docs-bot-settings-group', Helper::get_admin_settings_option( 'example_questions' ) );
 	}
 
 	/**
@@ -183,6 +184,7 @@ class Page {
 		$bsf_docs_bot['random_que']   = ( ( isset( $_POST['random_que'] ) && ! empty( $_POST['random_que'] ) ) ? stripcslashes( $_POST['random_que'] ) : '' );
 		$bsf_docs_bot['sily_phrase']  = ( ( isset( $_POST['sily_phrase'] ) && ! empty( $_POST['sily_phrase'] ) ) ? stripcslashes( $_POST['sily_phrase'] ) : '' );
 		$bsf_docs_bot['random_que_section']  = ( ( isset( $_POST['random_que_section'] ) && ! empty( $_POST['random_que_section'] ) ) ? sanitize_text_field( $_POST['random_que_section'] ) : '' );
+		$bsf_docs_bot['example_questions']  = ( ( isset( $_POST['example_questions'] ) && ! empty( $_POST['example_questions'] ) ) ? stripcslashes( $_POST['example_questions'] ) : '' );
 		$bsf_docs_bot['after_text']   = ( ( isset( $_POST['after_text'] ) && ! empty( $_POST['after_text'] ) ) ? stripcslashes( $_POST['after_text'] ) : '' );
 		$bsf_docs_bot['support_link'] = ! empty( $_POST['support_link'] ) ? sanitize_text_field( $_POST['support_link'] ) : '';
 
