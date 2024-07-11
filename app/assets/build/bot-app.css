@@ -863,6 +863,8 @@ video {
   margin-bottom: 1rem;
 }.mb-0 {
   margin-bottom: 0px;
+}.mb-8 {
+  margin-bottom: 2rem;
 }.ml-1 {
   margin-left: 0.25rem;
 }.ml-3 {
@@ -871,8 +873,8 @@ video {
   margin-left: auto;
 }.mt-1 {
   margin-top: 0.25rem;
-}.mt-12 {
-  margin-top: 3rem;
+}.mt-10 {
+  margin-top: 2.5rem;
 }.mt-2 {
   margin-top: 0.5rem;
 }.mt-3 {
@@ -919,6 +921,8 @@ video {
   min-width: 0px;
 }.min-w-full {
   min-width: 100%;
+}.max-w-\[90ch\] {
+  max-width: 90ch;
 }.flex-1 {
   flex: 1 1 0%;
 }.flex-shrink-0 {
@@ -1062,9 +1066,8 @@ video {
   text-align: left;
 }.text-center {
   text-align: center;
-}.text-3xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+}.text-\[32px\] {
+  font-size: 32px;
 }.text-sm {
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -1077,11 +1080,16 @@ video {
   font-weight: 500;
 }.font-semibold {
   font-weight: 600;
+}.leading-\[24px\] {
+  line-height: 24px;
 }.tracking-tight {
   letter-spacing: -0.025em;
 }.text-\[\#492CDD\] {
   --tw-text-opacity: 1;
   color: rgb(73 44 221 / var(--tw-text-opacity));
+}.text-\[\#5C2DDD\] {
+  --tw-text-opacity: 1;
+  color: rgb(92 45 221 / var(--tw-text-opacity));
 }.text-\[\#8478CD\] {
   --tw-text-opacity: 1;
   color: rgb(132 120 205 / var(--tw-text-opacity));
@@ -1121,9 +1129,6 @@ video {
 }.text-green-800 {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
-}.text-indigo-500 {
-  --tw-text-opacity: 1;
-  color: rgb(99 102 241 / var(--tw-text-opacity));
 }.text-red-400 {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
@@ -1151,11 +1156,7 @@ video {
 }.text-yellow-800 {
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity));
-}.shadow-sm {
-  --tw-shadow: 0 2px 6px rgb(15 23 42 / 0.08);
-  --tw-shadow-colored: 0 2px 6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}:root{--bdb-brand-color: #5C2DDD}.bdb-brand-color{color:var(--bdb-brand-color)}.bdb-search-wrapper{transition:all .2s}.popular-questions-wrapper{display:inline-flex;align-content:center;justify-content:center;align-items:center;gap:9px}#bsf-docs-bot-app h2{color:#492cdd}#ast-bsf-docs-content button.bsf-bot-random-cta,#ast-bsf-docs-content button.bsf-bot-random-cta:hover,#ast-bsf-docs-content button.bsf-bot-random-cta:focus,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:hover,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:focus{border:none;outline:none;border-radius:unset;background:rgba(0,0,0,0)}#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:hover,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:focus{background:rgba(0,0,0,0)}button.bsf-bot-ask-cta{border:none;padding:6px 10px;border-radius:4px}#ast-bsf-docs-content .mb-0{margin-bottom:0}.ast-desktop .bsf-docs-bot-input{padding-right:7rem;background-color:rgba(0,0,0,0)}.wpchat-code a{color:#7143e3;text-decoration:underline}.ast-bsf-docs-wrapper blockquote{border:none}.wpchat-code>*:last-child{margin-bottom:0}.ast-header-break-point .bsf-docs-bot-input{padding-right:2.5rem}@media(max-width: 1050px){.popular-questions-wrapper{display:inline}.popular-questions-wrapper button{margin-left:4px;margin-right:4px}}@media(max-width: 639px){.suggestions-wrapper{text-align:center}.bdb-search-inner-wrap .bsf-docs-bot-input:focus{border:1px solid var(--bdb-brand-color);outline:none;box-shadow:none}}@media(min-width: 640px){.bdb-search-wrapper .bsf-docs-bot-input{border:none;padding:0 7px;box-shadow:none}.bdb-search-wrapper .bsf-docs-bot-input:hover,.bdb-search-wrapper .bsf-docs-bot-input:focus{outline:none;border:none}#ast-bsf-docs-content .bdb-search-wrapper:hover{border-color:var(--theme-color-1, #492cdd);outline:none;box-shadow:none}.bdb-search-wrapper{border:1px solid #ded9ff;padding:7px}button.bsf-bot-ask-cta{max-width:132px;width:100%}}.focus-within\:ring-2:focus-within {
+}:root{--bdb-brand-color: #5C2DDD}.bdb-brand-color{color:var(--bdb-brand-color)}svg.animate-pulse path{stroke:#5c2ddd}.bdb-search-wrapper{transition:all .2s}.popular-questions-wrapper{display:inline-flex;align-content:center;justify-content:center;align-items:center;gap:9px}#bsf-docs-bot-app h2{color:#492cdd}#ast-bsf-docs-content button.bsf-bot-random-cta,#ast-bsf-docs-content button.bsf-bot-random-cta:hover,#ast-bsf-docs-content button.bsf-bot-random-cta:focus,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:hover,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:focus{border:none;outline:none;border-radius:unset;background:rgba(0,0,0,0)}#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:hover,#ast-bsf-docs-content button.bsf-bot-thumbs-reaction:focus{background:rgba(0,0,0,0)}button.bsf-bot-ask-cta{border:none;padding:6px 10px;border-radius:4px}#ast-bsf-docs-content .mb-0{margin-bottom:0}.ast-desktop .bsf-docs-bot-input{padding-right:7rem;background-color:rgba(0,0,0,0)}.wpchat-code a{color:#7143e3;text-decoration:underline}.ast-bsf-docs-wrapper blockquote{border:none}.wpchat-code>*:last-child{margin-bottom:0}.ast-header-break-point .bsf-docs-bot-input{padding-right:2.5rem}@media(max-width: 1050px){.popular-questions-wrapper{display:inline}.popular-questions-wrapper button{margin-left:4px;margin-right:4px}}@media(max-width: 639px){.suggestions-wrapper{text-align:center}.bdb-search-inner-wrap .bsf-docs-bot-input:focus{border:1px solid var(--bdb-brand-color);outline:none;box-shadow:none}}@media(min-width: 640px){.bdb-search-wrapper .bsf-docs-bot-input{border:none;padding:0 7px;box-shadow:none}.bdb-search-wrapper .bsf-docs-bot-input:hover,.bdb-search-wrapper .bsf-docs-bot-input:focus{outline:none;border:none}#ast-bsf-docs-content .bdb-search-wrapper:hover{border-color:var(--theme-color-1, #492cdd);outline:none;box-shadow:none}.bdb-search-wrapper{border:1px solid #ded9ff;padding:7px}button.bsf-bot-ask-cta{max-width:132px;width:100%}}.focus-within\:ring-2:focus-within {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
@@ -1248,12 +1249,6 @@ video {
     --tw-border-opacity: 1;
     border-color: rgb(209 213 219 / var(--tw-border-opacity));
   }
-
-  .max-\[600px\]\:shadow-sm {
-    --tw-shadow: 0 2px 6px rgb(15 23 42 / 0.08);
-    --tw-shadow-colored: 0 2px 6px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
 }@media (min-width: 640px) {
 
   .sm\:-ml-px {
@@ -1278,10 +1273,6 @@ video {
 
   .sm\:w-6 {
     width: 1.5rem;
-  }
-
-  .sm\:rounded-lg {
-    border-radius: 0.5rem;
   }
 
   .sm\:rounded-md {

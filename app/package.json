@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Astra's Docs Bot.",
 	"main": "",
+	"volta": {
+		"node": "14.17.3"
+	},
 	"scripts": {
 		"build": "wp-scripts build",
 		"start": "wp-scripts start",

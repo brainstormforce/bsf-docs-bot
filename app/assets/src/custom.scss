@@ -4,6 +4,9 @@
 .bdb-brand-color {
 	color: var(--bdb-brand-color);
 }
+svg.animate-pulse path {
+    stroke: #5C2DDD;
+}
 .bdb-search-wrapper {
 	transition: all 0.2s;
 }
