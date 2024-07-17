@@ -105,3 +105,17 @@ button.bsf-bot-ask-cta {
 		width: 100%;
 	}
 }
+button.bsf-bot-thumbs-reaction {
+    box-shadow: none;
+}
+button.bsf-bot-clear-input {
+    box-shadow: none;
+    margin-right: 10px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+}
+button.bsf-bot-clear-input:hover, button.bsf-bot-clear-input:focus, button.bsf-bot-clear-input:active {
+    border: none;
+    background: transparent;
+}

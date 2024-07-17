@@ -3,7 +3,8 @@ import {
 	HandThumbDownIcon,
 	ChatBubbleLeftEllipsisIcon,
 	HandThumbUpIcon,
-	ArrowPathIcon
+	ArrowPathIcon,
+	XMarkIcon
 } from '@heroicons/react/24/outline';
 import { remark } from 'remark';
 import html from 'remark-html';
@@ -47,8 +48,8 @@ export default function Chat() {
 	}, [answer])
 
 	// make api call to ask question
-	const askQuestion = async () => {
-		if (!question || question.length < 10) {
+	const askQuestion = ( askedQuestion ) => {
+		if ( ! askedQuestion ) {
 			setErrorText('Please enter a full question.')
 			return
 		}
@@ -60,7 +61,7 @@ export default function Chat() {
 		setRating(0)
 		setAnswerId(null)
 
-		const data = { question: question, format: 'markdown' }
+		const data = { question: askedQuestion, format: 'markdown' }
 
 		//get apiBase from env
 		const apiUrl = `wss://api.docsbot.ai/teams/${bsf_bot_localizer.team_id}/bots/${bsf_bot_localizer.bot_id}/chat`
@@ -208,7 +209,7 @@ export default function Chat() {
 		<div id="ask" className="relative">
 			<div className="mx-auto px-6 text-center lg:px-8">
 				<h2 className="text-left text-[32px] leading-[24px] font-bold tracking-tight text-[#492CDD] sm:text-4xl">
-					{ `Ask Me Anything About ${bsf_bot_localizer.product_name}.` }
+					{ `Ask Me Anything about ${bsf_bot_localizer.product_name}.` }
 				</h2>
 				<div className="mt-10 flex flex-col gap-4 max-[600px]:mt-8">
 					<Alert title={errorText} type="warning" />
@@ -217,9 +218,9 @@ export default function Chat() {
 						<>
 							<div className="mt-6 flex justify-center">
 								<div className="relative w-20">
-									<ChatBubbleLeftEllipsisIcon className="absolute m-6 h-8 w-8 animate-pulse text-[#5C2DDD]" />
-									<div className="h-20 w-20 rounded-full border-2 border-indigo-400"></div>
-									<div className="absolute left-0 top-0 h-20 w-20 animate-spin rounded-full border-t-4 border-fuchsia-600"></div>
+									<ChatBubbleLeftEllipsisIcon className="absolute m-6 h-8 w-8 animate-pulse text-[#7143E3]" />
+									<div className="h-20 w-20 rounded-full border-2 border-[#7143E3]"></div>
+									<div className="absolute left-0 top-0 h-20 w-20 animate-spin rounded-full border-t-4 border-[#7143E3]"></div>
 								</div>
 							</div>
 							<blockquote
@@ -234,7 +235,7 @@ export default function Chat() {
 							className=""
 							onSubmit={(e) => {
 								e.preventDefault()
-								askQuestion()
+								askQuestion( question )
 							}}
 							disabled={loading}
 						>
@@ -252,7 +253,7 @@ export default function Chat() {
 										onKeyDown={(e) => {
 											//submit on enter
 											if (e.key === 'Enter') {
-												askQuestion()
+												askQuestion( question )
 											}
 										}}
 										tabIndex={1}
@@ -284,6 +285,17 @@ export default function Chat() {
 										)
 									}
 								</div>
+
+								<button
+									className='bsf-bot-clear-input'
+									onClick={() => {
+										setResultHtml('')
+										setQuestion('')
+									} }
+								>
+									{ question && <XMarkIcon className='h-4 w-4 text-gray-400' /> }
+								</button>
+
 								<button
 									type="submit"
 									tabIndex={2}
@@ -297,18 +309,46 @@ export default function Chat() {
 								<span className='popular-questions-wrapper'>
 									<span className='text-sm font-semibold'> Popular Questions: </span>
 									{
-										exampleQuestions.map((question, index) => (
+										<>
 											<button
-												key={index}
-												className='an-popular-question text-[#8478CD] hover:text-[#8478CD] bg-[#EDEAFF] hover:bg-[#EDEAFF] border-none text-xs rounded-sm py-1 px-2'
+												type="submit"
+												className='an-popular-question text-[#8478CD] focus:text-[#8478CD] hover:text-[#8478CD] bg-[#EDEAFF] hover:bg-[#EDEAFF] border-none text-xs rounded-sm py-1 px-2 focus:bg-[#EDEAFF]'
 												onClick={() => {
-													setQuestion(question);
-													askQuestion();
+													// insert exampleQuestions[0]
+													setResultHtml('');
+													setQuestion(exampleQuestions[0]);
+													askQuestion( exampleQuestions[0] );
 												}}
 											>
-												{question}
+												{exampleQuestions[0]}
 											</button>
-										))
+
+											<button
+												type="submit"
+												className='an-popular-question text-[#8478CD] focus:text-[#8478CD] hover:text-[#8478CD] bg-[#EDEAFF] hover:bg-[#EDEAFF] border-none text-xs rounded-sm py-1 px-2 focus:bg-[#EDEAFF]'
+												onClick={() => {
+													// insert exampleQuestions[1]
+													setResultHtml('');
+													setQuestion(exampleQuestions[1]);
+													askQuestion( exampleQuestions[1] );
+												}}
+											>
+												{exampleQuestions[1]}
+											</button>
+
+											<button
+												type="submit"
+												className='an-popular-question text-[#8478CD] focus:text-[#8478CD] hover:text-[#8478CD] bg-[#EDEAFF] hover:bg-[#EDEAFF] border-none text-xs rounded-sm py-1 px-2 focus:bg-[#EDEAFF]'
+												onClick={() => {
+													// insert exampleQuestions[2]
+													setResultHtml('');
+													setQuestion(exampleQuestions[2]);
+													askQuestion( exampleQuestions[2] );
+												}}
+											>
+												{exampleQuestions[2]}
+											</button>
+										</>
 									}
 								</span>
 							</div>
@@ -327,7 +367,7 @@ export default function Chat() {
 										type="button"
 										onClick={() => setRating(1)}
 										disabled={rating === 1}
-										className="rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:ring-offset-2 disabled:text-fuchsia-600 bsf-bot-thumbs-reaction"
+										className="rounded-sm shadow-none text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:text-[#7143E3] focus:ring-offset-2 disabled:text-[#7143E3] bsf-bot-thumbs-reaction"
 									>
 										<span className="sr-only">Downvote</span>
 										<HandThumbUpIcon className="h-6 w-6" aria-hidden="true" />
@@ -336,7 +376,7 @@ export default function Chat() {
 										type="button"
 										onClick={() => setRating(-1)}
 										disabled={rating === -1}
-										className="rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:ring-offset-2 disabled:text-fuchsia-600 bsf-bot-thumbs-reaction"
+										className="rounded-sm shadow-none text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:text-[#7143E3] focus:ring-offset-2 disabled:text-[#7143E3] bsf-bot-thumbs-reaction"
 									>
 										<span className="sr-only">Upvote</span>
 										<HandThumbDownIcon className="h-6 w-6" aria-hidden="true" />
